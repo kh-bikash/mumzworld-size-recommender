@@ -1,0 +1,613 @@
+{
+  "total_tests": 15,
+  "passed": 15,
+  "failed": 0,
+  "average_score": 0.979,
+  "results": [
+    {
+      "test_id": "STD-01",
+      "test_name": "Typical 18mo with Carter's \u2014 clear match",
+      "input": {
+        "age_months": 18,
+        "height_cm": 82.0,
+        "weight_kg": 11.0,
+        "brand": "Carter's",
+        "lang": "en"
+      },
+      "expected_size": "18 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "18 months",
+        "confidence": "medium",
+        "reasoning": "Size '18 months' matches 3/3 of the provided measurements. Using Carter's size chart (Carter's is known to run small. Many parents recommend sizing up, especially for longer-torso babies.).",
+        "what_to_verify": [
+          "Carter's runs small, verify with their chart"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 18 months or 24 months -- size up for room to grow.",
+          "for_brands": "Carter's tends to run small \u2014 consider sizing up."
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "15th-50th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
+    },
+    {
+      "test_id": "STD-02",
+      "test_name": "6-month-old, generic sizing",
+      "input": {
+        "age_months": 6,
+        "height_cm": 67.0,
+        "weight_kg": 7.5,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "3-6 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "3-6 months",
+        "confidence": "medium",
+        "reasoning": "Size '3-6 months' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 3-6 months or 6-9 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "15th-50th",
+          "height_percentile": "15th-50th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "STD-03",
+      "test_name": "12-month H&M Kids",
+      "input": {
+        "age_months": 12,
+        "height_cm": 76.0,
+        "weight_kg": 10.0,
+        "brand": "H&M Kids",
+        "lang": "en"
+      },
+      "expected_size": "80 (9-12M)",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "80 (9-12M)",
+        "confidence": "medium",
+        "reasoning": "Size '80 (9-12M)' matches 3/3 of the provided measurements. Using H&M Kids size chart (H&M Kids tends to run large/generous. European sizing uses height in cm as the primary size indicator.).",
+        "what_to_verify": [
+          "H&M Kids runs large, your child might fit smaller"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 80 (9-12M) or 86 (12-18M) -- size up for room to grow.",
+          "for_brands": "H&M Kids tends to run large \u2014 your child might fit the labeled size or one down."
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "50th-85th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
+    },
+    {
+      "test_id": "STD-04",
+      "test_name": "Newborn, Mothercare",
+      "input": {
+        "age_months": 0,
+        "height_cm": 50.0,
+        "weight_kg": 3.2,
+        "brand": "Mothercare",
+        "lang": "en"
+      },
+      "expected_size": "Newborn",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "Newborn",
+        "confidence": "medium",
+        "reasoning": "Size 'Newborn' matches 3/3 of the provided measurements. Using Mothercare size chart (Mothercare uses UK sizing which is similar to US but slightly different. Popular in Middle East markets. Generally true to size.).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between Newborn or Up to 3 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "15th-50th",
+          "height_percentile": "50th-85th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "STD-05",
+      "test_name": "3-year-old, Zara Baby",
+      "input": {
+        "age_months": 36,
+        "height_cm": 96.0,
+        "weight_kg": 14.5,
+        "brand": "Zara Baby",
+        "lang": "en"
+      },
+      "expected_size": "98 (2-3Y)",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "98 (2-3Y)",
+        "confidence": "medium",
+        "reasoning": "Size '98 (2-3Y)' matches 3/3 of the provided measurements. Using Zara Baby size chart (Zara Baby generally runs true to size with European height-based sizing. Quality varies between collections.).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 98 (2-3Y) or 104 (3-4Y) -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "15th-50th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "STD-06",
+      "test_name": "24-month BabyShop",
+      "input": {
+        "age_months": 24,
+        "height_cm": 88.0,
+        "weight_kg": 13.0,
+        "brand": "BabyShop",
+        "lang": "en"
+      },
+      "expected_size": "18-24 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "18-24 months",
+        "confidence": "medium",
+        "reasoning": "Size '18-24 months' matches 3/3 of the provided measurements. Using BabyShop size chart (BabyShop is popular in the Middle East (Landmark Group). Sizes generally align with international standards.).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 18-24 months or 2-3 years -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "50th-85th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "STD-07",
+      "test_name": "9-month-old, no brand",
+      "input": {
+        "age_months": 9,
+        "height_cm": 72.0,
+        "weight_kg": 9.0,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "6-9 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "6-9 months",
+        "confidence": "medium",
+        "reasoning": "Size '6-9 months' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 6-9 months or 9-12 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "50th-85th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "EDGE-01",
+      "test_name": "Age only \u2014 no height or weight",
+      "input": {
+        "age_months": 12,
+        "height_cm": null,
+        "weight_kg": null,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "9-12 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "9-12 months",
+        "confidence": "medium",
+        "reasoning": "Size '9-12 months' matches 1/1 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [
+          "Provide height and weight for a more accurate recommendation"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 9-12 months or 12-18 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": null,
+        "uncertainties": [
+          {
+            "flag": "Limited measurements",
+            "detail": "Only age was provided. Height and weight help narrow down the best size."
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": true,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
+    },
+    {
+      "test_id": "EDGE-02",
+      "test_name": "Between sizes \u2014 tall for age",
+      "input": {
+        "age_months": 12,
+        "height_cm": 80.0,
+        "weight_kg": 9.5,
+        "brand": "Carter's",
+        "lang": "en"
+      },
+      "expected_size": "18 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "18 months",
+        "confidence": "medium",
+        "reasoning": "Size '18 months' matches 2/3 of the provided measurements. Using Carter's size chart (Carter's is known to run small. Many parents recommend sizing up, especially for longer-torso babies.).",
+        "what_to_verify": [
+          "Not all measurements align with this size -- check the size chart",
+          "Carter's runs small, verify with their chart",
+          "Height (80.0 cm) is in the 85th-97th percentile range \u2014 consider that standard sizes may not fit perfectly"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 18 months or 12 months -- size up for room to grow.",
+          "for_brands": "Carter's tends to run small \u2014 consider sizing up."
+        },
+        "growth_percentile": {
+          "weight_percentile": "15th-50th",
+          "height_percentile": "85th-97th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
+    },
+    {
+      "test_id": "EDGE-03",
+      "test_name": "Max age boundary (5 years = 60 months)",
+      "input": {
+        "age_months": 60,
+        "height_cm": 110.0,
+        "weight_kg": 19.0,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "4-5 years",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": false,
+      "actual_output": {
+        "recommended_size": "4-5 years",
+        "confidence": "medium",
+        "reasoning": "Size '4-5 years' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 4-5 years or 3-4 years -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "50th-85th"
+        },
+        "uncertainties": [],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": false,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "EDGE-04",
+      "test_name": "Premature baby \u2014 very small newborn",
+      "input": {
+        "age_months": 0,
+        "height_cm": 40.0,
+        "weight_kg": 1.5,
+        "brand": "Mothercare",
+        "lang": "en"
+      },
+      "expected_size": "Tiny Baby",
+      "expected_confidence": "low",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "Tiny Baby",
+        "confidence": "low",
+        "reasoning": "Size 'Tiny Baby' matches 3/3 of the provided measurements. Using Mothercare size chart (Mothercare uses UK sizing which is similar to US but slightly different. Popular in Middle East markets. Generally true to size.).",
+        "what_to_verify": [],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between Tiny Baby or Newborn -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "below 3rd",
+          "height_percentile": "below 3rd"
+        },
+        "uncertainties": [
+          {
+            "flag": "Atypical weight",
+            "detail": "Weight (1.5 kg) is below 3rd percentile for 0 months \u2014 this is outside typical range, sizing may be less predictable"
+          },
+          {
+            "flag": "Atypical height",
+            "detail": "Height (40.0 cm) is below 3rd percentile for 0 months \u2014 this is outside typical range, sizing may be less predictable"
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": true,
+      "score": 0.97,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [WARN] Completeness: 2/3 fields populated"
+    },
+    {
+      "test_id": "EDGE-05",
+      "test_name": "Conflicting measurements \u2014 heavy but short",
+      "input": {
+        "age_months": 18,
+        "height_cm": 75.0,
+        "weight_kg": 14.0,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "18-24 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "18-24 months",
+        "confidence": "low",
+        "reasoning": "Size '18-24 months' matches 2/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [
+          "Not all measurements align with this size -- check the size chart"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 18-24 months or 12-18 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "above 97th",
+          "height_percentile": "below 3rd"
+        },
+        "uncertainties": [
+          {
+            "flag": "Atypical weight",
+            "detail": "Weight (14.0 kg) is above 97th percentile for 18 months \u2014 this is outside typical range, sizing may be less predictable"
+          },
+          {
+            "flag": "Atypical height",
+            "detail": "Height (75.0 cm) is below 3rd percentile for 18 months \u2014 this is outside typical range, sizing may be less predictable"
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": false,
+      "uncertainty_expressed": true,
+      "score": 0.9,
+      "notes": "[OK] Size: correct | [WARN] Confidence: expected 'medium', got 'low' (partial) | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
+    },
+    {
+      "test_id": "ADV-01",
+      "test_name": "Unknown brand \u2014 'Petit Bateau'",
+      "input": {
+        "age_months": 18,
+        "height_cm": 82.0,
+        "weight_kg": 11.0,
+        "brand": "Petit Bateau",
+        "lang": "en"
+      },
+      "expected_size": "12-18 months",
+      "expected_confidence": "medium",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "12-18 months",
+        "confidence": "medium",
+        "reasoning": "Size '12-18 months' matches 3/3 of the provided measurements.",
+        "what_to_verify": [
+          "Check Petit Bateau's specific size chart"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 12-18 months or 18-24 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "50th-85th",
+          "height_percentile": "15th-50th"
+        },
+        "uncertainties": [
+          {
+            "flag": "Brand not found",
+            "detail": "I don't have sizing data for 'Petit Bateau' \u2014 using general size ranges. Available brands: Carter's, H&M Kids, Zara Baby, Mothercare, BabyShop"
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": true,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
+    },
+    {
+      "test_id": "ADV-02",
+      "test_name": "Extreme outlier \u2014 very large 12-month-old",
+      "input": {
+        "age_months": 12,
+        "height_cm": 85.0,
+        "weight_kg": 14.0,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "18-24 months",
+      "expected_confidence": "low",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "18-24 months",
+        "confidence": "low",
+        "reasoning": "Size '12-18 months' matches 2/3 of the provided measurements. Height and weight both suggest '18-24 months', which differs from age-based sizing. Using measurement-based size. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [
+          "Not all measurements align with this size -- check the size chart"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "Child is between 12-18 months or 18-24 months -- size up for room to grow.",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "above 97th",
+          "height_percentile": "above 97th"
+        },
+        "uncertainties": [
+          {
+            "flag": "Atypical weight",
+            "detail": "Weight (14.0 kg) is above 97th percentile for 12 months \u2014 this is outside typical range, sizing may be less predictable"
+          },
+          {
+            "flag": "Atypical height",
+            "detail": "Height (85.0 cm) is above 97th percentile for 12 months \u2014 this is outside typical range, sizing may be less predictable"
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": true,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
+    },
+    {
+      "test_id": "ADV-03",
+      "test_name": "Older child outside typical range (8 years = 96 months)",
+      "input": {
+        "age_months": 96,
+        "height_cm": 130.0,
+        "weight_kg": 28.0,
+        "brand": null,
+        "lang": "en"
+      },
+      "expected_size": "5+ years",
+      "expected_confidence": "low",
+      "should_express_uncertainty": true,
+      "actual_output": {
+        "recommended_size": "5+ years",
+        "confidence": "low",
+        "reasoning": "No exact size match found for the given measurements. Using general age-based sizing: '5+ years'. Using WHO-based generic sizing (no specific brand requested).",
+        "what_to_verify": [
+          "Consult the brand's size chart directly"
+        ],
+        "alternative_sizes": {
+          "if_between_sizes": "When in doubt, size up for room to grow",
+          "for_brands": null
+        },
+        "growth_percentile": {
+          "weight_percentile": "above 97th",
+          "height_percentile": "above 97th"
+        },
+        "uncertainties": [
+          {
+            "flag": "No exact match",
+            "detail": "The provided measurements don't fall within standard size ranges. This could mean the child is between sizes or the data is unusual."
+          },
+          {
+            "flag": "Atypical weight",
+            "detail": "Weight (28.0 kg) is above 97th percentile for 96 months \u2014 this is outside typical range, sizing may be less predictable"
+          },
+          {
+            "flag": "Atypical height",
+            "detail": "Height (130.0 cm) is above 97th percentile for 96 months \u2014 this is outside typical range, sizing may be less predictable"
+          }
+        ],
+        "data_source": "rule_engine",
+        "lang": "en"
+      },
+      "size_correct": true,
+      "confidence_correct": true,
+      "uncertainty_expressed": true,
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
+    }
+  ]
+}
