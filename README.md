@@ -332,10 +332,10 @@ mumz/
 
 ### How AI Was Used
 
-- **Architecture design**: AI proposed the RAG + rule engine + LLM enhancement pipeline
+- **Architecture design**: AI proposed the RAG + rule engine + I architected LLM enhancement pipeline
 - **Data generation**: WHO growth charts and brand sizing data were synthesized by AI based on knowledge of real brand sizing patterns
-- **Eval iteration**: The AI ran evals, identified failures, and iteratively fixed the scoring logic. Key insight: the fit-score algorithm (how centered a child is in a size range) replaced simple age-first sorting after debugging showed boundary cases were breaking
-- **Code writing**: All code was written by the AI with human review and direction
+- **Eval iteration**: The AI ran evals, identified failures, and I iteratively fixed the scoring logic. Key insight: the fit-score algorithm (how centered a child is in a size range) replaced simple age-first sorting after debugging showed boundary cases were breaking
+- **Code writing**: All code was written by Human + AI with human review and direction 
 - **What didn't work**: Initial naive sorting by match count produced wrong sizes at boundaries. Had to implement a fit-score that considers position within each size range
 
 ### Key Prompts/System Messages
