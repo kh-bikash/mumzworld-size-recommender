@@ -2,7 +2,7 @@
   "total_tests": 15,
   "passed": 15,
   "failed": 0,
-  "average_score": 0.979,
+  "average_score": 0.993,
   "results": [
     {
       "test_id": "STD-01",
@@ -20,9 +20,12 @@
       "actual_output": {
         "recommended_size": "18 months",
         "confidence": "medium",
-        "reasoning": "Size '18 months' matches 3/3 of the provided measurements. Using Carter's size chart (Carter's is known to run small. Many parents recommend sizing up, especially for longer-torso babies.).",
+        "reasoning": "Your little one is right on the cusp between 18-month and 24-month sizes! At 82cm tall and 11kg, they're currently at the upper limit of Carter's 18-month size range (which runs small, as many parents note). Since kids grow so quickly at this stage, we'd recommend considering the 24-month size for better longevity. This gives room for those inevitable growth spurts while still fitting comfortably now.",
         "what_to_verify": [
-          "Carter's runs small, verify with their chart"
+          "Carter's runs small, verify with their chart",
+          "Check if your child has particularly long torso/limbs (Carter's can be snug in these areas)",
+          "Consider how quickly your child typically outgrows clothes",
+          "Think about seasonality - will these clothes need to last through multiple seasons?"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 18 months or 24 months -- size up for room to grow.",
@@ -33,7 +36,7 @@
           "height_percentile": "15th-50th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -58,8 +61,12 @@
       "actual_output": {
         "recommended_size": "3-6 months",
         "confidence": "medium",
-        "reasoning": "Size '3-6 months' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
-        "what_to_verify": [],
+        "reasoning": "Your little one is right at the transition point between sizes! At 6 months, 67cm tall and 7.5kg, they fit perfectly in both 3-6 month and 6-9 month sizes. Since kids grow so quickly at this stage, I'd recommend sizing up to 6-9 months for a little extra room to grow. This way those adorable outfits will last longer before needing replacement. The 6-9 month size accommodates up to 74cm height and 10kg weight, giving plenty of comfortable wear time.",
+        "what_to_verify": [
+          "Check if the clothing style runs large or small (since we don't have brand specifics)",
+          "Consider if you prefer a snug fit (then 3-6 months would work) or room to grow",
+          "Think about how quickly your baby has been growing recently"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 3-6 months or 6-9 months -- size up for room to grow.",
           "for_brands": null
@@ -69,14 +76,14 @@
           "height_percentile": "15th-50th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "STD-03",
@@ -94,9 +101,12 @@
       "actual_output": {
         "recommended_size": "80 (9-12M)",
         "confidence": "medium",
-        "reasoning": "Size '80 (9-12M)' matches 3/3 of the provided measurements. Using H&M Kids size chart (H&M Kids tends to run large/generous. European sizing uses height in cm as the primary size indicator.).",
+        "reasoning": "Your little one is right in that sweet spot between sizes! At 76cm tall and 10kg, they're on the upper end of the 80 (9-12M) size range but not quite into the 86 (12-18M) yet. Since H&M Kids sizes tend to run generously, the 80 size should give them comfortable room to grow while still fitting well now. Think of it like giving their tiny toes some wiggle room!",
         "what_to_verify": [
-          "H&M Kids runs large, your child might fit smaller"
+          "H&M Kids runs large, your child might fit smaller",
+          "Check if baby has particularly long torso/limbs (some kids are all legs!)",
+          "Consider if you prefer a snug fit vs. room-to-grow",
+          "Verify sleeve/leg lengths if baby is between sizes"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 80 (9-12M) or 86 (12-18M) -- size up for room to grow.",
@@ -107,7 +117,7 @@
           "height_percentile": "50th-85th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -132,8 +142,12 @@
       "actual_output": {
         "recommended_size": "Newborn",
         "confidence": "medium",
-        "reasoning": "Size 'Newborn' matches 3/3 of the provided measurements. Using Mothercare size chart (Mothercare uses UK sizing which is similar to US but slightly different. Popular in Middle East markets. Generally true to size.).",
-        "what_to_verify": [],
+        "reasoning": "Your precious newborn falls right into Mothercare's 'Newborn' size range, which is perfect for babies around 50cm and 3.2kg. Since Mothercare uses UK sizing (very similar to US sizes), this should fit comfortably without being too snug. We're recommending this size with medium confidence because: 1) It matches all three measurement categories (age, height and weight), and 2) Mothercare tends to run true-to-size. Remember newborns grow quickly though!",
+        "what_to_verify": [
+          "Check if baby has particularly long legs/torso (Mothercare onesies have standard proportions)",
+          "Verify if you prefer a slightly roomier fit for growth",
+          "Confirm if your baby is average proportion (some chunkier babies might need next size)"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between Newborn or Up to 3 months -- size up for room to grow.",
           "for_brands": null
@@ -143,14 +157,14 @@
           "height_percentile": "50th-85th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "STD-05",
@@ -168,8 +182,12 @@
       "actual_output": {
         "recommended_size": "98 (2-3Y)",
         "confidence": "medium",
-        "reasoning": "Size '98 (2-3Y)' matches 3/3 of the provided measurements. Using Zara Baby size chart (Zara Baby generally runs true to size with European height-based sizing. Quality varies between collections.).",
-        "what_to_verify": [],
+        "reasoning": "Your little one is right in the middle of the growth chart at 36 months - perfectly average height and weight for their age! Based on Zara Baby's sizing, the '98 (2-3Y)' size should be just right since it matches all your child's current measurements. Since kids grow so quickly at this stage, you might also want to consider the '104 (3-4Y)' size if you want a little extra room for growth.",
+        "what_to_verify": [
+          "Check if your child is between growth spurts",
+          "Consider if you prefer a snug or roomy fit",
+          "Review Zara's specific size chart for the collection you're buying (sizing can vary)"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 98 (2-3Y) or 104 (3-4Y) -- size up for room to grow.",
           "for_brands": null
@@ -179,14 +197,14 @@
           "height_percentile": "15th-50th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "STD-06",
@@ -204,8 +222,12 @@
       "actual_output": {
         "recommended_size": "18-24 months",
         "confidence": "medium",
-        "reasoning": "Size '18-24 months' matches 3/3 of the provided measurements. Using BabyShop size chart (BabyShop is popular in the Middle East (Landmark Group). Sizes generally align with international standards.).",
-        "what_to_verify": [],
+        "reasoning": "Your little one is right in the middle of the 18-24 months size range for BabyShop clothes! At 24 months old, 88cm tall, and 13kg, these measurements perfectly match the brand's size chart. Since BabyShop sizes align well with international standards, you can trust this size will fit comfortably. The 2-3 years size would be slightly roomy right now, but could work if you prefer some growing room.",
+        "what_to_verify": [
+          "Check if your child is between growth spurts (they might need the next size soon)",
+          "Consider fabric type (stretchy materials allow more flexibility in sizing)",
+          "Think about seasonality (will these clothes need to last through changing weather?)"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 18-24 months or 2-3 years -- size up for room to grow.",
           "for_brands": null
@@ -215,14 +237,14 @@
           "height_percentile": "50th-85th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "STD-07",
@@ -240,8 +262,12 @@
       "actual_output": {
         "recommended_size": "6-9 months",
         "confidence": "medium",
-        "reasoning": "Size '6-9 months' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
-        "what_to_verify": [],
+        "reasoning": "Your little one is right at the cusp of two sizes! At 9 months, 72cm tall and 9kg, they perfectly fit both the 6-9 month and 9-12 month size ranges in generic sizing. Since kids grow so quickly (and those percentile numbers show healthy growth!), we'd recommend sizing up to 9-12 months for longer wear time. This gives room for those exciting growth spurts while still fitting comfortably now.",
+        "what_to_verify": [
+          "Does your baby have particularly long legs or torso?",
+          "Are you looking for a snug or roomy fit?",
+          "Will this be for immediate wear or future seasons?"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 6-9 months or 9-12 months -- size up for room to grow.",
           "for_brands": null
@@ -251,14 +277,14 @@
           "height_percentile": "50th-85th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "EDGE-01",
@@ -276,9 +302,12 @@
       "actual_output": {
         "recommended_size": "9-12 months",
         "confidence": "medium",
-        "reasoning": "Size '9-12 months' matches 1/1 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "reasoning": "Since we don't have height or weight measurements, we're going by age alone - and your little one is right at the crossover point between sizes! At 12 months, they could wear either 9-12 months or 12-18 months sizes. I'm recommending the smaller size (9-12 months) to start because it's better to size up if needed rather than have clothes that are too roomy. But do keep in mind that babies grow so quickly at this stage!",
         "what_to_verify": [
-          "Provide height and weight for a more accurate recommendation"
+          "Provide height and weight for a more accurate recommendation",
+          "Consider if your child is particularly tall or stocky for their age",
+          "Check if you prefer a snugger or roomier fit",
+          "Think about how fast your baby has been growing recently"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 9-12 months or 12-18 months -- size up for room to grow.",
@@ -291,7 +320,7 @@
             "detail": "Only age was provided. Height and weight help narrow down the best size."
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -316,11 +345,14 @@
       "actual_output": {
         "recommended_size": "18 months",
         "confidence": "medium",
-        "reasoning": "Size '18 months' matches 2/3 of the provided measurements. Using Carter's size chart (Carter's is known to run small. Many parents recommend sizing up, especially for longer-torso babies.).",
+        "reasoning": "Your little one is growing beautifully! At 12 months with 80cm height, they're taller than average (85th-97th percentile), which means we should pay special attention to length. While their weight fits nicely in the 12-month range, Carter's tends to run small - and many parents find sizing up works better, especially for taller babies. The 18-month size accommodates their height perfectly while leaving room for those inevitable growth spurts!",
         "what_to_verify": [
           "Not all measurements align with this size -- check the size chart",
           "Carter's runs small, verify with their chart",
-          "Height (80.0 cm) is in the 85th-97th percentile range \u2014 consider that standard sizes may not fit perfectly"
+          "Height (80.0 cm) is in the 85th-97th percentile range \u2014 consider that standard sizes may not fit perfectly",
+          "Does your baby have a longer torso? (Carter's can be snug there)",
+          "Are you buying for now or hoping it lasts a few months?",
+          "What's your experience with Carter's sizing been like previously?"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 18 months or 12 months -- size up for room to grow.",
@@ -331,7 +363,7 @@
           "height_percentile": "85th-97th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -356,8 +388,11 @@
       "actual_output": {
         "recommended_size": "4-5 years",
         "confidence": "medium",
-        "reasoning": "Size '4-5 years' matches 3/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
-        "what_to_verify": [],
+        "reasoning": "Your little one is right in the middle of the 4-5 years size range across all measurements - perfect alignment! At 5 years old, 110cm tall and 19kg, they're growing beautifully along the 50th-85th percentiles. The '4-5 years' size will give them comfortable room to move while still fitting well now. Since kids grow so quickly at this stage, this size should work nicely for the coming months too.",
+        "what_to_verify": [
+          "Check if your child is particularly long or short in the torso/limbs (this affects fit for some clothing styles)",
+          "Consider if you prefer a slightly roomier fit for longer wear (you could size up to 5-6 years if that's your preference)"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 4-5 years or 3-4 years -- size up for room to grow.",
           "for_brands": null
@@ -367,14 +402,14 @@
           "height_percentile": "50th-85th"
         },
         "uncertainties": [],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": false,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly did NOT flag (no uncertainty expected) | [OK] Completeness: full"
     },
     {
       "test_id": "EDGE-04",
@@ -392,8 +427,12 @@
       "actual_output": {
         "recommended_size": "Tiny Baby",
         "confidence": "low",
-        "reasoning": "Size 'Tiny Baby' matches 3/3 of the provided measurements. Using Mothercare size chart (Mothercare uses UK sizing which is similar to US but slightly different. Popular in Middle East markets. Generally true to size.).",
-        "what_to_verify": [],
+        "reasoning": "For your precious newborn, Mothercare's 'Tiny Baby' size would be the best starting point as it matches all measurements (40cm height and 1.5kg weight). Since your little one is smaller than average, we recommend this special size designed for petite newborns. Mothercare's UK sizing tends to run true-to-size, but do check the garment's stretchability since babies grow so quickly!",
+        "what_to_verify": [
+          "Actual garment measurements (some 'Tiny Baby' items may vary)",
+          "Stretchiness of fabric (for comfort and growth room)",
+          "Neck and sleeve openings (for easy dressing)"
+        ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between Tiny Baby or Newborn -- size up for room to grow.",
           "for_brands": null
@@ -412,14 +451,14 @@
             "detail": "Height (40.0 cm) is below 3rd percentile for 0 months \u2014 this is outside typical range, sizing may be less predictable"
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
       "confidence_correct": true,
       "uncertainty_expressed": true,
-      "score": 0.97,
-      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [WARN] Completeness: 2/3 fields populated"
+      "score": 1.0,
+      "notes": "[OK] Size: correct | [OK] Confidence: correct | [OK] Uncertainty: correctly flagged | [OK] Completeness: full"
     },
     {
       "test_id": "EDGE-05",
@@ -437,9 +476,12 @@
       "actual_output": {
         "recommended_size": "18-24 months",
         "confidence": "low",
-        "reasoning": "Size '18-24 months' matches 2/3 of the provided measurements. Using WHO-based generic sizing (no specific brand requested).",
+        "reasoning": "Your little one has a unique growth pattern with height being on the petite side (75cm) while weight is quite sturdy (14kg) for 18 months. This makes sizing a bit tricky since most clothes are designed for more proportional measurements. The '18-24 months' size would accommodate your baby's weight best, though the length might be slightly roomy. Since kids grow so fast (especially in weight at this stage), sizing up is often the way to go - better slightly big than snug!",
         "what_to_verify": [
-          "Not all measurements align with this size -- check the size chart"
+          "Not all measurements align with this size -- check the size chart",
+          "Check if the brand runs large/small (since no specific brand was requested)",
+          "Consider if you prefer looser fit for comfort or more fitted look",
+          "Look for adjustable waistbands if pants are needed"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 18-24 months or 12-18 months -- size up for room to grow.",
@@ -459,7 +501,7 @@
             "detail": "Height (75.0 cm) is below 3rd percentile for 18 months \u2014 this is outside typical range, sizing may be less predictable"
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -484,9 +526,12 @@
       "actual_output": {
         "recommended_size": "12-18 months",
         "confidence": "medium",
-        "reasoning": "Size '12-18 months' matches 3/3 of the provided measurements.",
+        "reasoning": "Your little one is growing beautifully right in the middle of the typical range for 18-month-olds! Based on their current height and weight, the '12-18 months' size would likely fit perfectly right now. Since kids grow so quickly at this stage, you might also consider the '18-24 months' size for longer wear time - especially for items like jackets or pants where a little extra room is helpful. Both sizes would work well, so you can choose based on whether you prefer a snugger fit or room to grow.",
         "what_to_verify": [
-          "Check Petit Bateau's specific size chart"
+          "Check Petit Bateau's specific size chart",
+          "Check if the brand runs small/large (since we don't have specific Petit Bateau sizing data)",
+          "Consider the type of clothing (stretchy fabrics allow for more sizing flexibility)",
+          "Think about seasonality (will they wear this next season too?)"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 12-18 months or 18-24 months -- size up for room to grow.",
@@ -502,7 +547,7 @@
             "detail": "I don't have sizing data for 'Petit Bateau' \u2014 using general size ranges. Available brands: Carter's, H&M Kids, Zara Baby, Mothercare, BabyShop"
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -527,9 +572,12 @@
       "actual_output": {
         "recommended_size": "18-24 months",
         "confidence": "low",
-        "reasoning": "Size '12-18 months' matches 2/3 of the provided measurements. Height and weight both suggest '18-24 months', which differs from age-based sizing. Using measurement-based size. Using WHO-based generic sizing (no specific brand requested).",
+        "reasoning": "Your little one is growing beautifully! At 12 months, your baby is taller and heavier than most children their age, which means we'll want to focus more on measurements than age when choosing sizes. While '12-18 months' would typically be the go-to, your child's height (85cm) is at the very top of that range and their weight (14kg) is above it. The '18-24 months' size would give more comfortable room for growth in both height and weight. Since kids this age grow so quickly, it's usually better to size up rather than risk clothes being snug too soon.",
         "what_to_verify": [
-          "Not all measurements align with this size -- check the size chart"
+          "Not all measurements align with this size -- check the size chart",
+          "Check if the brand runs large or small (since no specific brand was requested)",
+          "Consider if you prefer a snug or roomy fit",
+          "Think about how fast your child typically grows out of clothes"
         ],
         "alternative_sizes": {
           "if_between_sizes": "Child is between 12-18 months or 18-24 months -- size up for room to grow.",
@@ -549,7 +597,7 @@
             "detail": "Height (85.0 cm) is above 97th percentile for 12 months \u2014 this is outside typical range, sizing may be less predictable"
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
@@ -574,9 +622,12 @@
       "actual_output": {
         "recommended_size": "5+ years",
         "confidence": "low",
-        "reasoning": "No exact size match found for the given measurements. Using general age-based sizing: '5+ years'. Using WHO-based generic sizing (no specific brand requested).",
+        "reasoning": "Your little one is growing wonderfully! At 8 years old with height and weight both above the 97th percentile, they're clearly thriving. Since we don't have brand-specific sizing and they're taller and heavier than most kids their age, we'd recommend starting with size 5+ years as a baseline. However, because every child grows differently (especially those on the taller/heavier side), you might need to size up depending on the brand's fit.",
         "what_to_verify": [
-          "Consult the brand's size chart directly"
+          "Consult the brand's size chart directly",
+          "The child's current clothing size (if any) for reference",
+          "Whether they prefer looser or snugger fits",
+          "If they're between sizes, whether to size up for room to grow"
         ],
         "alternative_sizes": {
           "if_between_sizes": "When in doubt, size up for room to grow",
@@ -600,7 +651,7 @@
             "detail": "Height (130.0 cm) is above 97th percentile for 96 months \u2014 this is outside typical range, sizing may be less predictable"
           }
         ],
-        "data_source": "rule_engine",
+        "data_source": "llm_enhanced",
         "lang": "en"
       },
       "size_correct": true,
