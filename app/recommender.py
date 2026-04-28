@@ -52,7 +52,7 @@ class SizeRecommender:
         self.retriever = get_retriever()
         self.growth_analyzer = get_analyzer()
         self.api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
-        self.model = os.getenv("LLM_MODEL", "google/gemini-2.0-flash-001")
+        self.model = os.getenv("LLM_MODEL", "deepseek/deepseek-chat-v3-0324")
         self.llm_available = bool(self.api_key) and self.api_key != "your_key_here"
 
     async def recommend(self, request: SizeRequest) -> SizeRecommendation:

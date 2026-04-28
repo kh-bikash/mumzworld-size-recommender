@@ -178,9 +178,9 @@ curl -X POST http://localhost:8000/recommend \
 |---|---|
 | Total test cases | 15 |
 | Passed (≥ 0.7) | **15/15** |
-| Average score | **97.9%** |
-| Standard cases | 97.9% (7/7) |
-| Edge cases | 96.8% (5/5) |
+| Average score | **99.3%** (with LLM) / 97.9% (rules only) |
+| Standard cases | 100.0% (7/7) |
+| Edge cases | 98.0% (5/5) |
 | Adversarial cases | 100.0% (3/3) |
 
 ### Scoring Rubric
@@ -328,7 +328,7 @@ mumz/
 | LLM | Purpose | How Used |
 |---|---|---|
 | **Claude Opus 4 (Thinking)** | Full agent build | Pair-coding via Gemini Antigravity — designed architecture, wrote all code, iterated on evals, debugged sizing logic |
-| **Google Gemini 2.0 Flash** (optional, via OpenRouter) | Runtime enhancement | If API key configured, enhances rule-based reasoning with more natural, parent-friendly language |
+| **DeepSeek Chat v3** (via OpenRouter) | Runtime enhancement | Enhances rule-based reasoning with warm, parent-friendly language. Adds contextual verify items (e.g., "check if your child has a long torso"). Runs on every request when API key is configured. |
 
 ### How AI Was Used
 
